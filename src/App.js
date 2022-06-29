@@ -5,14 +5,17 @@ const players = [
   {
     name: "John",
     score: 15,
+    id: "1",
   },
   {
     name: "Jane",
     score: 15,
+    id: "2",
   },
   {
     name: "Jim",
     score: 15,
+    id: "3",
   },
 ];
 
@@ -24,7 +27,7 @@ function App() {
       </heading>
       <main>
         {players.map((player) => (
-          <Player name={player.name} score={player.score} />
+          <Player key={player.id} name={player.name} score={player.score} />
         ))}
         <Button background={"red"}>End game</Button>
       </main>
